@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fef6ff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #8e44ad;
+}
+
+#fileInput, #downloadBtn {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d7bde2;
+    color: #5b2c6f;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#downloadBtn {
+    background-color: #bb8fce;
+}
+
+#board {
+    width: 90%;
+    margin: 20px auto;
+    min-height: 500px;
+    background-color: #ffffff;
+    border: 2px dashed #d7bde2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    position: relative;
+}
+
+.board-item {
+    width: 150px;
+    height: 150px;
+    background-color: #f5eef8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: grab;
+    position: relative;
+}
+
+.board-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #f9e79f 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkleMove 0.6s linear forwards;
+}
+
+@keyframes sparkleMove {
+    0% {transform: scale(1);}
+    100% {transform: scale(0) translateY(-50px);}
+}
